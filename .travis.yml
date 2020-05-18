@@ -14,7 +14,7 @@ after_success:
 - docker build -t djsmallman/multi-nginx ./nginx
 - docker build -t djsmallman/multi-server ./server
 - docker build -t djsmallman/multi-worker ./worker
-# log in to docker cli
+# log in to docker cli - updated
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # Take those images and push to docker hub
 - docker push djsmallman/multi-client
