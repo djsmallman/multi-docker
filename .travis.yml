@@ -23,14 +23,14 @@ after_success:
 - docker push djsmallman/multi-worker
 
 deploy:
-provider: elasticbeanstalk
-region: eu-west-2
-app: multi-docker
-env: MultiDocker-env
-bucket_name: elasticbeanstalk-eu-west-2-997493607229
-bucket_path: docker-multi
+    provider: elasticbeanstalk
+    region: eu-west-2
+    app: multi-docker
+    env: MultiDocker-env
+    bucket_name: elasticbeanstalk-eu-west-2-997493607229
+    bucket_path: docker-multi
 on:
-branch: master
+    branch: master
 access_key_id: $AWS_ACCESS_KEY
 secret_access_key: $AWS_SECRET_KEY
 
